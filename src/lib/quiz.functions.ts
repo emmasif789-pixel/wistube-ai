@@ -55,7 +55,7 @@ Chapters:
 ${data.context.chapters.map((c) => `- ${c.title}: ${c.summary}`).join("\n")}`;
 
     const content = await callGroq({
-      models: ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"],
+      models: ["openai/gpt-oss-20b", "openai/gpt-oss-120b"],
       keyOffset: 0,
       messages: [
         {
