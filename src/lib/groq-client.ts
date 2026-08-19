@@ -61,6 +61,7 @@ export async function callGroq(args: {
             messages: args.messages,
             temperature: args.temperature ?? 0.5,
             max_tokens: args.maxTokens,
+            reasoning_effort: "low",
           }),
         });
         lastStatus = res.status;
