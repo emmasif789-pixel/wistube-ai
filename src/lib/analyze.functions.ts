@@ -154,7 +154,7 @@ function sanitizeTimestamps(
 // budget is too small for it). See groq-client.ts for key rotation, which
 // is the real lever for scaling total daily capacity beyond one key's cap.
 const MAX_COMPLETION_TOKENS = 3000;
-const MAX_TRANSCRIPT_CHARS = 16000;
+const MAX_TRANSCRIPT_CHARS = 9000;
 
 // Instead of slicing only the START of the transcript (which meant a 3hr
 // video was only ever analyzed on its first ~20 minutes), sample evenly
