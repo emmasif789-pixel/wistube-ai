@@ -153,7 +153,7 @@ function sanitizeTimestamps(
 // with enough headroom for this call size (llama-3.1-8b-instant's 6,000 TPM
 // budget is too small for it). See groq-client.ts for key rotation, which
 // is the real lever for scaling total daily capacity beyond one key's cap.
-const MAX_COMPLETION_TOKENS = 2000;
+const MAX_COMPLETION_TOKENS = 3000;
 const MAX_TRANSCRIPT_CHARS = 16000;
 
 // Instead of slicing only the START of the transcript (which meant a 3hr
