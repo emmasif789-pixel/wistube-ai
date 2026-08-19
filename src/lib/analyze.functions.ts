@@ -255,7 +255,7 @@ ${transcriptForPrompt}
 Return the JSON report now.`;
 
   const content = await callGroq({
-    models: ["llama-3.3-70b-versatile"],
+       models: ["openai/gpt-oss-120b"],
     messages: [
       { role: "system", content: system },
       { role: "user", content: user },
