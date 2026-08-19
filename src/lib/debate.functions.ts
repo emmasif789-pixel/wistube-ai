@@ -57,7 +57,7 @@ ${data.context.keyInsights.map((k) => `- ${k.title}: ${k.body}`).join("\n")}`;
     const debateSystem = `You are an educational critical-thinking assistant. Based on the video below, produce a balanced exploration of perspectives. Rules: mainViewpoint = 2-4 short bullet points summarizing the video's primary argument or approach. counterargument = 2-4 short bullet points giving a realistic, thoughtful, educational opposing perspective — not a strawman. If the video is opinion-based, this is a genuine opposing viewpoint. If the video is instructional or factual (e.g. a tutorial), frame this as a genuinely different valid method, an important limitation, or a common misconception about the approach shown — still a real, substantive perspective, never invented just to fill the section. balancedConclusion = 2-3 neutral sentences comparing both views and when each may be valid. Return JSON only in this shape: {"mainViewpoint":[string,...],"counterargument":[string,...],"balancedConclusion":string}`;
 
     const content = await callGroq({
-      models: ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"],
+           models: ["openai/gpt-oss-20b", "openai/gpt-oss-120b"],
       keyOffset: 1,
       messages: [
         { role: "system", content: debateSystem },
